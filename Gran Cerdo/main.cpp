@@ -11,9 +11,12 @@ using namespace rlutil;
 #include "Cerditos.h"
 #include "Dados.h"
 
+
 int main(){
+    
+    char jugador1[25];
+    char jugador2[25];
     int opcion;
-    int vDados[2];
     // setBackgroundColor(0);
     do{
         cls();
@@ -29,10 +32,10 @@ int main(){
 
      switch(opcion){
         case 1:
-            NuevoJuego();
+            NuevoJuego(jugador1, jugador2);
             break;
         case 2:
-            Estadisticas();
+            Estadisticas(jugador1, jugador2);
             break;
         case 3:
             Cerditos();
