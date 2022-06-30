@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Dados.h"
 
-void lanzarDados(int dados[], int cant) {
+void lanzarDados(int dados[], int cant){
     srand(time(NULL));
     for (int i = 0; i < cant; i++){
         dados[i] = rand() % 6 + 1;
