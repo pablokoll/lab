@@ -2,22 +2,23 @@
 #include <ctime>
 #include <cstdlib>
 #include "rlutil.h"
-
 using namespace std;
 using namespace rlutil;
 
-#include "NuevoJuego.h"
-#include "Estadisticas.h"
-#include "Cerditos.h"
-#include "Dados.h"
+#include "NuevoJuego.cpp"
+#include "Estadisticas.cpp"
+#include "Cerditos.cpp"
+#include "Dados.cpp"
+#include "Rondas.cpp"
+#include "Struct.h"   
 
 
 int main(){
     
-    char jugador1[25];
-    char jugador2[25];
+jugador *j1 = new jugador[200];
+jugador *j2 = new jugador;
+
     int opcion;
-    // setBackgroundColor(0);
     do{
         cls();
         cout << "GRAN CERDO" << endl;
@@ -32,13 +33,13 @@ int main(){
 
      switch(opcion){
         case 1:
-            NuevoJuego(jugador1, jugador2);
+            NuevoJuego(j1, j2);
             break;
         case 2:
-            Estadisticas(jugador1, jugador2);
+            Estadisticas(j1, j2);
             break;
         case 3:
-            Cerditos();
+            Cerditos(j1, j2);
             break;
         default:
             break;
