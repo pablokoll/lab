@@ -53,6 +53,47 @@ char* quienComienza(jugador *j1, jugador *j2){
     }
 }
 
+char seguirTirando(){
+    char seguir;
+    cout << "Desea seguir tirando? (S/N): ";
+    cin >> seguir;
+    if(seguir == 'S' || seguir == 's' || seguir == 'N' || seguir == 'n'){
+        return seguir;
+    }
+    else{
+        cout << "Ingrese una opcion valida" << endl;
+        seguirTirando();
+    }
+}
+
+//Esta funcion tiene que ejecutar el juego, arrancando el que haya ganado el "quienComienza".
+//El jugador va a arrancar a tirar los dados y se tiene que analizar cada tirada para ir contando los puntos o ver que sucede
+//Despues de que tira el jugador, se tiene que ver si quiere seguir tirando o no, para esto esta la funcion seguirTirando().
+//Ver como hacer el switch para cunado el jugador quiera dejar de tirar o caiga en el barro.
+
 void comenzarJuego(jugador *j1, jugador *j2, char comienza[2]){
-    cout << "EMPIEZA: " << comienza << endl;
+    int rondas = 0;
+    int dadosCant = 2;
+    int dados[dadosCant];
+    do{
+        cout << "Ronda " << rondas << endl;
+        cout << "El jugador " << comienza << " comienza" << endl;
+    if(comienza == "J1"){
+        cout << "arranco con un tiki con un par de lobas";
+    }else if(comienza == "J2"){
+        cout << "tu wacha baja al piso cuando escucha al noba";
+    }
+
+    
+    char decision = seguirTirando();
+    system("pause");
+    if(decision == 'N' || decision == 'n'){
+        //Switchear el jugador
+        //Cuando termina el segundo turno cambiar devuelta y sumar una ronda
+        rondas++;
+    }else if(decision == 'S' || decision == 's'){
+        // Sigo jugando
+    }
+    }while(rondas < 5);
+
 }

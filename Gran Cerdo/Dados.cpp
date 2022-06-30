@@ -18,6 +18,7 @@ void mostrarDados(int v[], int cant){
 }
 
 void analizarDados(int dados[], int cant){
+    
 }
 
 int sumarVector(int v[], int tam){
