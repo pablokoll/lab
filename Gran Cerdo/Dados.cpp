@@ -20,8 +20,7 @@ void mostrarDados(int v[], int cant){
 void analizarDados(int dados[], int cant){
 }
 
-int sumarVector(int v[], int tam)
-{
+int sumarVector(int v[], int tam){
     int i, suma = 0;
     for(i=0; i<tam; i++)
     {

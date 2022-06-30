@@ -12,10 +12,9 @@ using namespace rlutil;
 #include "Rondas.cpp"
 #include "Struct.h"   
 
-
 int main(){
-    
-jugador *j1 = new jugador[200];
+
+jugador *j1 = new jugador;
 jugador *j2 = new jugador;
 
     int opcion;

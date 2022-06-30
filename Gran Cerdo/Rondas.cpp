@@ -1,37 +1,58 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 #include "Rondas.h"
 #include "Dados.h"
 #include "Struct.h"
 
 void pedirNombres(jugador *j1, jugador *j2){
-    std::string nombre;
     cout << "Introduce el nombre del jugador 1: ";
     cin >> j1->nombre;
-    // j1.nombre = &nombre;
     cout << "Introduce el nombre del jugador 2: ";
     cin >> j2->nombre;
-    // j2.nombre = &nombre;
     cout << "El jugador 1 es: " << j1->nombre << endl;
     cout << "El jugador 2 es: " << j2->nombre << endl;
 }
 
-void quienComienza(jugador *j1, jugador *j2){
+char* quienComienza(jugador *j1, jugador *j2){
     int dados[2];
     int lanzamientoJ1[2];
-    int lanzamientoJ2[2];
-    for(int i=0; i<2; i++){     
-        lanzarDados(dados, 2);
-        mostrarDados(dados, 2);
-        lanzamientoJ1[i] = dados[i];
-        system("pause");
-    }
+    int lanzamientoJ2[2];  
+    lanzarDados(dados, 2);
+    mostrarDados(dados, 2);
+    lanzamientoJ1[0] = dados[0];
+    lanzamientoJ1[1] = dados[1];
     int sumaJ1 = sumarVector(lanzamientoJ1, 2);
+    system("pause");
+    lanzarDados(dados, 2);
+    mostrarDados(dados, 2);
+    lanzamientoJ2[0] = dados[0];
+    lanzamientoJ2[1] = dados[1];
     int sumaJ2 = sumarVector(lanzamientoJ2, 2);
-    cout << "dados l1 " << lanzamientoJ1[0] << endl;
-    cout << "dados l1 " << lanzamientoJ1[1] << endl;
+    system("pause");
+    if(sumaJ1 > sumaJ2){
+        cout << "El jugador 1 comienza" << endl;
+        return "J1";
+    }else if(sumaJ1 < sumaJ2){
+        cout << "El jugador 2 comienza" << endl;
+        return "J2";
+    }else{
+        cout << "Empate!" << endl;
+        int maxJ1 = max(lanzamientoJ1[0], lanzamientoJ1[1]);
+        int maxJ2 = max(lanzamientoJ2[0], lanzamientoJ2[1]);
+        if(maxJ1 > maxJ2){
+            cout << "El jugador 1 comienza" << endl;
+            return "J1";
+        }else if(maxJ1 < maxJ2){
+            cout << "El jugador 2 comienza" << endl;
+            return "J2";
+        }else{
+            cout << "Empate!" << endl;
+            quienComienza(j1, j2);
+        }
+    }
 }
 
-void comenzarJuego(){
-    
+void comenzarJuego(jugador *j1, jugador *j2, char comienza[2]){
+    cout << "EMPIEZA: " << comienza << endl;
 }
