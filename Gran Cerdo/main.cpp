@@ -23,7 +23,7 @@ jugador *j2 = new jugador;
         cout << "GRAN CERDO" << endl;
         cout << "---------------------" << endl;
         cout << "1 - JUGAR" << endl;
-        cout << "2 - ESTADÍSTICAS" << endl;
+        cout << "2 - ESTADISTICAS" << endl;
         cout << "3 - CERDITOS" << endl;
         cout << "---------------------" << endl;
         cout << "0 - SALIR" << endl;
@@ -32,7 +32,7 @@ jugador *j2 = new jugador;
 
      switch(opcion){
         case 1:
-            NuevoJuego(j1, j2);
+            nuevoJuego(j1, j2);
             break;
         case 2:
             Estadisticas(j1, j2);
@@ -43,7 +43,10 @@ jugador *j2 = new jugador;
         default:
             break;
     }
-    } while(opcion !=0);
+    } while(opcion !=0);{
+        seguirTirando();
+        return 0;
+    };
 
     return 0;
 }

@@ -5,5 +5,7 @@
 void pedirNombres(jugador *j1, jugador *j2);
 int quienComienza(jugador *j1, jugador *j2);
 void comenzarJuego(jugador *j1, jugador *j2, int comienza);
+int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas);
+void finDelJuego(jugador *j1, jugador *j2);
 
 #endif

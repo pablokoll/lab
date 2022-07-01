@@ -3,7 +3,7 @@
 
 void lanzarDados(int dados[], int cant);
 void mostrarDados(int dados[], int cant);
-void analizarDados(int dados[], int cant);
+int analizarDados(int dados[], int can, jugador *jugador, bool &barro);
 
 #endif
 
