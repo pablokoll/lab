@@ -38,7 +38,7 @@ char seguirTirando(){
     }
 }
 
-int analizarDados(int dados[], int cant, jugador *jugadorActual, bool &barro, jugador *j1, jugador *j2){
+int analizarDados(int dados[], int cant, jugador *jugadorActual, jugador *j1, jugador *j2){
     int puntosLanzamiento = 0;
 
     // DOS DADOS:

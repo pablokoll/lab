@@ -4,7 +4,7 @@
 
 void lanzarDados(int dados[], int cant);
 void mostrarDados(int dados[], int cant);
-int analizarDados(int dados[], int can, jugador *jugadorActual, bool &barro, jugador *j1, jugador *j2);
+int analizarDados(int dados[], int can, jugador *jugadorActual, jugador *j1, jugador *j2);
 char seguirTirando();
 
 #endif

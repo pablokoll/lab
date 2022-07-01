@@ -53,7 +53,7 @@ int quienComienza(jugador *j1, jugador *j2){
 
 
 int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas){
-    bool barro = false;
+    
     if(dadosCant == 2){
         if(j1->barro || j2->barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
     }
@@ -76,7 +76,7 @@ int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int 
     
     lanzarDados(dados, dadosCant);
     mostrarDados(dados, dadosCant);
-    jugadorActual->puntosRonda += analizarDados(dados, dadosCant, jugadorActual, barro, j1, j2);
+    jugadorActual->puntosRonda += analizarDados(dados, dadosCant, jugadorActual, j1, j2);
 
     // SI NO SALE AS QUE EL JUGADOR ACTUAL ELIJA SI TIRAR O NO
     if(dados[0] != 1 && dados[1] != 1 && dados[2] != 1){
