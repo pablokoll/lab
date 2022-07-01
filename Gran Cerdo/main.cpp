@@ -20,13 +20,13 @@ jugador *j2 = new jugador;
     int opcion;
     do{
         cls();
-        cout << "GRAN CERDO" << endl;
+        cout << " GRAN CERDO" << endl;
         cout << "---------------------" << endl;
-        cout << "1 - JUGAR" << endl;
-        cout << "2 - ESTADISTICAS" << endl;
-        cout << "3 - CERDITOS" << endl;
+        cout << " 1 - JUGAR" << endl;
+        cout << " 2 - ESTADISTICAS" << endl;
+        cout << " 3 - CERDITOS" << endl;
         cout << "---------------------" << endl;
-        cout << "0 - SALIR" << endl;
+        cout << " 0 - SALIR" << endl;
         cin >> opcion;
         cls();
 
@@ -38,7 +38,7 @@ jugador *j2 = new jugador;
             Estadisticas(j1, j2);
             break;
         case 3:
-            Cerditos(j1, j2);
+            Cerditos();
             break;
         default:
             break;

@@ -1,4 +1,68 @@
 # depslib dependency file v1.0
-1656463412 source:c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\main.cpp
+1656706699 source:c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\main.cpp
 	<iostream>
+	<ctime>
+	<cstdlib>
+	"rlutil.h"
+	"NuevoJuego.cpp"
+	"Estadisticas.cpp"
+	"Cerditos.cpp"
+	"Dados.cpp"
+	"Rondas.cpp"
+	"Struct.h"
+
+1656465058 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1656706712 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\nuevojuego.cpp
+	"NuevoJuego.h"
+	"Rondas.h"
+	"Dados.h"
+	"Struct.h"
+
+1656705947 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\nuevojuego.h
+	"Struct.h"
+
+1656706103 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\struct.h
+
+1656705936 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\rondas.h
+	"Struct.h"
+
+1656696554 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\dados.h
+	"Struct.h"
+
+1656706740 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\estadisticas.cpp
+	"Estadisticas.h"
+	"Struct.h"
+	"NuevoJuego.h"
+
+1656637829 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\estadisticas.h
+
+1656706724 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\cerditos.cpp
+	"Cerditos.h"
+
+1656706065 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\cerditos.h
+
+1656706911 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\dados.cpp
+	<iostream>
+	"Dados.h"
+	"Struct.h"
+
+1656706808 c:\users\greis\desktop\utn\primer cuatrimestre\laboratorio de computación i\trabajo integrador\repo trabajo integrador\lab\gran cerdo\rondas.cpp
+	<iostream>
+	<math.h>
+	"Rondas.h"
+	"Dados.h"
+	"Struct.h"
 
