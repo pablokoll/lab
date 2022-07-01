@@ -55,7 +55,7 @@ int quienComienza(jugador *j1, jugador *j2){
 int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas){
     
     if(dadosCant == 2){
-        if(j1->barro || j2->barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
+        if(j1->barro || j2->barro || j1->puntosTotales > 50 && j2->puntosTotales > 50) dadosCant = 3;
     }
     cls();
     // CONDICION PARA QUE CAMBIE A TIRAR CON 3 DADOS
