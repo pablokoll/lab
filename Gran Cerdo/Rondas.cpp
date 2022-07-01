@@ -54,9 +54,12 @@ int quienComienza(jugador *j1, jugador *j2){
 
 int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas){
     bool barro = false;
+    cout  << "    " << barro << "    " << endl;
+    if(dadosCant == 2){
+        if(barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
+    }
     cls();
     // CONDICION PARA QUE CAMBIE A TIRAR CON 3 DADOS
-    if(barro || j1->puntosTotales > 50 && j2->puntosTotales > 50) dadosCant = 3;
     cout << " GRAN CERDO" << endl;
     cout << "----------------------------------------------------" << endl;
     cout << " " << j1->nombre << ": " << j1->puntosTotales << " trufas acumuladas" << "      " << j2->nombre << ": " << j2->puntosTotales << " trufas acumuladas" << endl << endl;
@@ -102,6 +105,9 @@ void comenzarJuego(jugador *j1, jugador *j2, int comienza){
         cls();
         // COMIENZA JUGADOR 1
         if(comienza == 1){ 
+                if(dadosCant == 2){
+                    if(j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
+                }
             puntosRondaJ1 = realizarLanzamiento(j1, dados, dadosCant, lanzamientos, j1, j2, rondas);
             if (puntosRondaJ1 == 1){
                 puntosRondaJ1 = 0;
@@ -203,7 +209,7 @@ void finDelJuego(jugador *j1, jugador *j2){
     cout << " HITO" << "                                 " << j1->nombre << "                        " << j2->nombre << endl;
     cout << "---------------------------------------------------------------------------------------------------" << endl;
     cout << " Mas trufas en total           "  <<  masTrufasTotalJ1   <<    " PDV (" << j1->puntosTotales << " trufas)              " <<    masTrufasTotalJ2   <<   " PDV (" << j2->puntosTotales << " trufas)" << endl;
-    cout << " Cada 50 trufas                "  <<    cincuentaTrufasJ1     << " PDV (" << j1->puntosTotales << " trufas)              "   << cincuentaTrufasJ2   << " PDV (" << j2->puntosTotales << " trufas)" << endl;
+    cout << " Cada 50 trufas                "  <<    cincuentaTrufasJ1     << " PDV (" << cincuentaTrufasJ1 * 50 << " trufas)              "   << cincuentaTrufasJ2   << " PDV (" << cincuentaTrufasJ2 * 50 << " trufas)" << endl;
     cout << " Oinks                         " << oinksJ1 << " PDV (" << j1->oink << " Oinks)               "<< oinksJ2 <<" PDV (" << j2->oink << " Oinks)" << endl;
     cout << " Cerdo codicioso               " << cerdoCodiciosoJ1 << " PDV (" << j1->cantidadLanzamientos << " lanzamientos)        " << cerdoCodiciosoJ2 << " PDV (" << j2->cantidadLanzamientos << " lanzamientos)" << endl;
     cout << "---------------------------------------------------------------------------------------------------" << endl;
