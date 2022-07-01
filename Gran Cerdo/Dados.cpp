@@ -61,7 +61,7 @@ int analizarDados(int dados[], int cant, jugador *jugadorActual, bool &barro, ju
             puntosLanzamiento = 0;
             jugadorActual->puntosTotales = 0;
             cout << endl << " Sacaste doble as te hundiste en el barro y termina tu turno" << endl << endl;
-            barro = true;
+            jugadorActual->barro = true;
             return puntosLanzamiento;
         }
         //Dados distintos y hay 1 as
@@ -97,7 +97,7 @@ int analizarDados(int dados[], int cant, jugador *jugadorActual, bool &barro, ju
             puntosLanzamiento = 0;
             jugadorActual->puntosTotales = 0;
             cout << endl << " Sacaste triple as te hundiste en el barro y termina tu turno" << endl << endl;
-            barro = true;
+            jugadorActual->barro = true;
             return puntosLanzamiento;
         }
         // Dos dados son AS y el otro no -> HUNDE EN EL BARRO
@@ -105,7 +105,7 @@ int analizarDados(int dados[], int cant, jugador *jugadorActual, bool &barro, ju
             puntosLanzamiento = 0;
             jugadorActual->puntosTotales = 0;
             cout << endl << " Sacaste doble as te hundiste en el barro, perdiste todas tus trufas acumuladas y termina tu turno" << endl << endl;
-            barro = true;
+            jugadorActual->barro = true;
             return puntosLanzamiento;
         }
         // Dos dados iguales y uno distino (ninguna es un AS) CHECK

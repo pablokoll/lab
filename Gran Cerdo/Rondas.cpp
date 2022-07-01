@@ -54,9 +54,8 @@ int quienComienza(jugador *j1, jugador *j2){
 
 int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas){
     bool barro = false;
-    cout  << "    " << barro << "    " << endl;
     if(dadosCant == 2){
-        if(barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
+        if(j1->barro || j2->barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
     }
     cls();
     // CONDICION PARA QUE CAMBIE A TIRAR CON 3 DADOS
@@ -106,7 +105,7 @@ void comenzarJuego(jugador *j1, jugador *j2, int comienza){
         // COMIENZA JUGADOR 1
         if(comienza == 1){ 
                 if(dadosCant == 2){
-                    if(j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
+                    if(j1->barro || j2->barro || j1->puntosTotales > 5 && j2->puntosTotales > 5) dadosCant = 3;
                 }
             puntosRondaJ1 = realizarLanzamiento(j1, dados, dadosCant, lanzamientos, j1, j2, rondas);
             if (puntosRondaJ1 == 1){

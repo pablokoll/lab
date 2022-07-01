@@ -8,6 +8,7 @@ struct jugador {
     int cantidadLanzamientos = 0;
     int oink = 0;
     int pdv = 0;
+    bool barro = false;
 };
 
 #endif
