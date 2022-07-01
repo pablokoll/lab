@@ -17,8 +17,26 @@ void mostrarDados(int v[], int cant){
     }
 }
 
-void analizarDados(int dados[], int cant){
+int analizarDados(int dados[], int cant, int puntosRonda){
+    string expression;
     
+    if(cant == 2){
+        //Caras distintas entre si y ningun AS
+        
+    }else if(cant == 3){
+        //Dos Caras iguales y una distinta sin AS
+
+    }
+
+    switch (expression)
+    {
+    case /* constant-expression */:
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
 }
 
 int sumarVector(int v[], int tam){

@@ -67,12 +67,16 @@ char seguirTirando(){
 }
 
 int jugarRonda(jugador *jugador, int dados[], int dadosCant){
-    cout << "arranco con un tiki con un par de lobas" << jugador->nombre << endl;
     int puntosRonda = 0;
+    int lanzamientos = 0;
     lanzarDados(dados, dadosCant);
     mostrarDados(dados, dadosCant);
-    // void analizarDados();
-
+    puntosRonda = analizarDados(dados, dadosCant, puntosRonda);
+    
+    lanzamientos++;
+    if(lanzamientos > jugador->cantidadLanzamientos){
+        jugador->cantidadLanzamientos = lanzamientos;
+    }
     char decision = seguirTirando();
     if(decision == 'N' || decision == 'n'){
         return puntosRonda;
@@ -91,21 +95,27 @@ void comenzarJuego(jugador *j1, jugador *j2, int comienza){
     int dadosCant = 2;
     int dados[dadosCant];
     int puntosTotalesJ1 = 0;
+    int puntosTotalesJ2 = 0;
     do{
-        cout << "Ronda " << rondas << endl;
         if(comienza == 1){
+        cout << "Ronda: " << rondas << " - Jugador: " << j1->nombre << endl;
         puntosTotalesJ1 =+ jugarRonda(j1, dados, dadosCant);
         system("pause");
-        jugarRonda(j2, dados, dadosCant);
+        cout << "Ronda: " << rondas << " - Jugador: " << j2->nombre << endl;
+        puntosTotalesJ2 =+ jugarRonda(j2, dados, dadosCant);
         rondas++;
         system("pause");
         }else if(comienza == 2){
-        jugarRonda(j2, dados, dadosCant);
+        cout << "Ronda: " << rondas << " - Jugador: " << j2->nombre << endl;
+        puntosTotalesJ2 =+ jugarRonda(j2, dados, dadosCant);
         system("pause");
+        cout << "Ronda: " << rondas << " - Jugador: " << j1->nombre << endl;
         puntosTotalesJ1 =+ jugarRonda(j1, dados, dadosCant);
         rondas++;
         system("pause");
         }
     }while(rondas < 6);
+    cout << "El jugador 1 tiene: " << puntosTotalesJ1 << " puntos" << endl;
+    cout << "El jugador 1 lanzo: " << j1->cantidadLanzamientos << " puntos" << endl;
 }
 
