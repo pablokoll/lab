@@ -15,7 +15,8 @@ void reiniciarJuego(jugador *j1, jugador *j2){
 }
 
 void nuevoJuego(jugador *j1, jugador *j2){
-    reinciarJuego(j1, j2);
+    reiniciarJuego(j1, j2);
+    
     pedirNombres(j1, j2);
     int comienza = quienComienza(j1, j2);
     comenzarJuego(j1, j2, comienza);

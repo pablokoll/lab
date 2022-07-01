@@ -76,7 +76,8 @@ char seguirTirando(){
 int realizarLanzamiento(jugador *jugadorActual, int dados[], int dadosCant, int lanzamientos, jugador *j1, jugador *j2, int rondas){
     bool barro = false;
     cls();
-    if(barro || j1->puntosTotales > 10 && j2->puntosTotales > 10) dadosCant = 3;
+    // CONDICION PARA QUE CAMBIE A TIRAR CON 3 DADOS
+    if(barro || j1->puntosTotales > 50 && j2->puntosTotales > 50) dadosCant = 3;
     cout << "GRAN CERDO" << endl;
     cout << "----------------------------------------------------" << endl;
     cout << j1->nombre << ": " << j1->puntosTotales << " trufas acumuladas" << "      " << j2->nombre << ": " << j2->puntosTotales << " trufas acumuladas" << endl << endl;
@@ -158,17 +159,17 @@ void comenzarJuego(jugador *j1, jugador *j2, int comienza){
 void finDelJuego(jugador *j1, jugador *j2){
     cls();
     string Oink;
-    cout << "    GRAN CERDO" << endl;
-    cout << "------------------------------------------------------------------------" << endl;
-    cout << "HITO" << j1->nombre << j2->nombre << endl;
-    cout << "------------------------------------------------------------------------" << endl;
-    cout << "Mas trufas en total" << " PDV (" << j2->puntosTotales << " trufas)" << " PDV (" << j2->puntosTotales << " trufas)" << endl;
-    cout << "Cada 50 trufas 6 PDV (300 trufas) 5 PDV (250 trufas)" << endl;
-    cout << "Oinks " << j1->oink * 2 << " PDV (" << j1->oink << " Oinks) "<< j2->oink * 2 <<" PDV (" << j2->oink << " Oinks)" << endl;
-    cout << "Cerdo codicioso " << " PDV (" << j1->cantidadLanzamientos << " lanzamientos) " << " PDV (" << j2->cantidadLanzamientos << " lanzamientos)" << endl;
-    cout << "------------------------------------------------------------------------" << endl;
-    cout << "TOTAL 18 PDV 16 PDV" << endl;
-    cout << "GANADOR: PEPPA con 18 puntos de victoria." << endl;
+    cout << "                               GRAN CERDO" << endl;
+    cout << "---------------------------------------------------------------------------------------------------" << endl;
+    cout << "HITO" << "                                 " << j1->nombre << "                               " << j2->nombre << endl;
+    cout << "---------------------------------------------------------------------------------------------------" << endl;
+    cout << "Mas trufas en total" << "                   PDV (" << j2->puntosTotales << " trufas)" << "                 PDV (" << j2->puntosTotales << " trufas)" << endl;
+    cout << "Cada 50 trufas                        6 PDV (300 trufas)                 5 PDV (250 trufas)" << endl;
+    cout << "Oinks                                 " << j1->oink * 2 << " PDV (" << j1->oink << " Oinks)                    "<< j2->oink * 2 <<" PDV (" << j2->oink << " Oinks)" << endl;
+    cout << "Cerdo codicioso " << "                        PDV (" << j1->cantidadLanzamientos << " lanzamientos) " << "             PDV (" << j2->cantidadLanzamientos << " lanzamientos)" << endl;
+    cout << "---------------------------------------------------------------------------------------------------" << endl;
+    cout << "TOTAL                                 18 PDV                             16 PDV" << endl << endl;
+    cout << "GANADOR: PEPPA con 18 puntos de victoria." << endl << endl;
     cout << "Ingrese Oink para continuar:" << endl;
     cin >> Oink;
     if(Oink != "Oink"){
